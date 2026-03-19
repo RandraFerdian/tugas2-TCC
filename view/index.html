@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Notes - 123230014</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Catatan</h1>
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Cari Catatan...">
+                </div>
+                <button id="btn-add-note" class="btn-primary">+</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="notes-grid" class="notes-grid"></section>
+    </main>
+
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <div id="modal-detail" class="modal-panel hidden">
+            <div class="modal-header">
+                <h2 id="detail-judul"></h2>
+                <button class="btn-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <p id="detail-isi"></p>
+                <span id="detail-tanggal" class="note-date"></span>
+            </div>
+            <div class="modal-footer footer-detail">
+                <button id="btn-edit-note" class="btn-secondary">Edit</button>
+                <button id="btn-delete-prompt" class="btn-danger">Hapus</button>
+            </div>
+        </div>
+
+        <div id="modal-form" class="modal-panel hidden">
+            <div class="modal-header">
+                <h2 id="form-title">Catatan Baru</h2>
+                <button class="btn-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="note-form">
+                    <input type="text" id="judul" placeholder="Judul" required>
+                    <textarea id="isi" placeholder="Mulai menulis..." rows="1" required></textarea>
+                    <input type="hidden" id="note-id">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" form="note-form" class="btn-primary">Simpan</button>
+            </div>
+        </div>
+
+        <div id="modal-confirm" class="modal-panel modal-sm hidden">
+            <div class="modal-body">
+                <h3>Hapus Catatan?</h3>
+                <p>Catatan ini akan dihapus permanen.</p>
+            </div>
+            <div class="modal-footer footer-confirm">
+                <button class="btn-secondary" onclick="closeModal()">Batal</button>
+                <button id="btn-confirm-delete" class="btn-danger-confirm">Hapus</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="view/index.js"></script>
+</body>
+
+</html>

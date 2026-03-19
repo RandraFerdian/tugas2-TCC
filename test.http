@@ -1,0 +1,24 @@
+### Mengambil Semua Catatan
+GET http://localhost:3000/api/notes
+Accept: application/json
+
+### Menambah Catatan Baru
+POST http://localhost:3000/api/notes
+Content-Type: application/json
+
+{
+    "judul": "Tugas 2 Praktikum TCC",
+    "isi": "Mengerjakan tugas 2 Praktikum TCC (Belum Selesai)."
+}
+
+### Mengubah Catatan (Ganti :id dengan ID asli dari database)
+PUT http://localhost:3000/api/notes/1
+Content-Type: application/json
+
+{
+    "judul": "Tugas 2 Praktikum TCC (Updated)",
+    "isi": "Tugas 2 Praktikum TCC (Sudah Selesai)."
+}
+
+### Menghapus Catatan (Ganti :id dengan ID asli)
+DELETE http://localhost:3000/api/notes/1
