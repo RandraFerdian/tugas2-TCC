@@ -1,5 +1,5 @@
 const getApiBase = () =>
-  `https://tugas2-tcc-361164671321.us-central1.run.app/api/notes`;
+  `https://tcc-tugas3-backend-361164671321.us-central1.run.app/api/notes`;
 
 // Variabel global untuk menyimpan data catatan agar fitur search lancar
 let allNotes = [];
