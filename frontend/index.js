@@ -1,5 +1,5 @@
-let port = 3000;
-const getApiBase = () => `http://35.238.219.24:${port}/api/notes`;
+const getApiBase = () =>
+  `https://tugas2-tcc-361164671321.us-central1.run.app/api/notes`;
 
 // Variabel global untuk menyimpan data catatan agar fitur search lancar
 let allNotes = [];
@@ -10,15 +10,10 @@ const textareaIsi = document.querySelector("#isi");
 const searchInput = document.querySelector("#search-input");
 
 document.addEventListener("DOMContentLoaded", () => {
-  const inputPort = prompt(
-    "Masukkan port Back-End\nPort default: 3000",
-    "3000",
-  );
-  if (inputPort) port = inputPort.trim();
   getNotes();
 });
 
-// --- MANAJEMEN MODAL ---
+// --- MANAJEMEN MODAL --
 function openModal(modalId) {
   overlay.classList.remove("hidden");
   document
