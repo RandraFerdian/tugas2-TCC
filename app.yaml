@@ -9,9 +9,9 @@ automatic_scaling:
 
 handlers:
   - url: /
-    static_files: index.html
-    upload: index.html
+    static_files: frontend/index.html
+    upload: frontend/index.html
 
   - url: /(.*)
-    static_files: \1
-    upload: (.*)
+    static_files: frontend/\1
+    upload: frontend/(.*)
