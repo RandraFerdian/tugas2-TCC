@@ -1,9 +1,9 @@
 ### Mengambil Semua Catatan
-GET http://localhost:3000/api/notes
+GET https://tcc-tugas3-backend-361164671321.us-central1.run.app/api/notes
 Accept: application/json
 
 ### Menambah Catatan Baru
-POST http://localhost:3000/api/notes
+POST https://tcc-tugas3-backend-361164671321.us-central1.run.app/api/notes
 Content-Type: application/json
 
 {
@@ -12,7 +12,7 @@ Content-Type: application/json
 }
 
 ### Mengubah Catatan (Ganti :id dengan ID asli dari database)
-PUT http://localhost:3000/api/notes/1
+PUT https://tcc-tugas3-backend-361164671321.us-central1.run.app/api/notes/1
 Content-Type: application/json
 
 {
@@ -21,4 +21,4 @@ Content-Type: application/json
 }
 
 ### Menghapus Catatan (Ganti :id dengan ID asli)
-DELETE http://localhost:3000/api/notes/1
+DELETE https://tcc-tugas3-backend-361164671321.us-central1.run.app/api/notes/1
